@@ -1,6 +1,14 @@
+Recoil(GlobalState管理)
+https://recoiljs.org/docs/basic-tutorial/atoms
+Recoil example
+https://github.com/chetanraj/react-recoil-example
+
 CSS in JS
 https://www.i-ryo.com/entry/2020/12/16/052128
 https://akabeko.me/blog/2020/11/styled-components/
 
 Storybook(UI開発ツール)
 https://www.learnstorybook.com/intro-to-storybook/react/ja/get-started/
+
+Reset CSS
+https://github.com/zacanger/styled-reset
