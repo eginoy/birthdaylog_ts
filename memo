@@ -7,6 +7,12 @@ CSS in JS
 https://www.i-ryo.com/entry/2020/12/16/052128
 https://akabeko.me/blog/2020/11/styled-components/
 
+material-ui
+material-ui theme設定
+https://qiita.com/tag1216/items/2935c9979b857bb7701f
+themeカラー
+https://colorhunt.co/palette/17117
+
 styled-componentsでのmaterial-ui component スタイル上書き
 https://qiita.com/Ouvill/items/c6761c32d31ffb11e114#material-ui-%E3%81%A8-styled-components-%E3%82%92%E4%B8%80%E7%B7%92%E3%81%AB%E4%BD%BF%E3%81%86
 
@@ -15,3 +21,6 @@ https://www.learnstorybook.com/intro-to-storybook/react/ja/get-started/
 
 Reset CSS
 https://github.com/zacanger/styled-reset
+
+以下react native本 参考ページ
+カラー設定説明 P419
