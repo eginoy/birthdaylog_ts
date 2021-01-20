@@ -3,14 +3,14 @@ import { createMuiTheme } from '@material-ui/core'
 const theme = createMuiTheme({
     palette:{
         primary:{
-            main: "#08d9d6"
+            main: "#252a34"
         },
         secondary:{
-            main:"#252a34"
+            main:"#08d9d6"
         },
         text:{
-            primary:"#08d9d6",
-            secondary: "#fff",
+            primary:"#fff",
+            secondary: "#08d9d6"
         },
         background:{
             default: "#fff",
@@ -28,6 +28,11 @@ const theme = createMuiTheme({
     props:{
         MuiTextField:{
             variant: "outlined"
+        }
+    },
+    mixins:{
+        toolbar:{
+            minHeight:45
         }
     }
 })
