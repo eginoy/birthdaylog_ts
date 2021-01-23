@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { AppBar, Button, Toolbar } from "@material-ui/core"
 import Typography from '@material-ui/core/Typography';
+import UserName from '../atoms/UserName';
 
 const StyledAppBar = styled(AppBar)`
     *{
@@ -10,6 +11,11 @@ const StyledAppBar = styled(AppBar)`
 `
 const ToolbarLeft = styled.div`
     
+`
+
+const WellComeUserText = styled.span`
+    display: inline-block;
+    margin: auto 1em;
 `
 
 const ToolbarRight = styled.div`
@@ -26,13 +32,20 @@ const StyledButton = styled(Button)`
     }
 `
 
-export default function NavigationBar() {
+let userName = 'eginoy'
+
+const NavigationBar: React.FC = () => {
     return (
         <StyledAppBar>
             <Toolbar>
-                <StyledTypography variant="h6">
-                    ٩(ŏ﹏ŏ｡ )۶
+                <ToolbarLeft>
+                    <StyledTypography variant="h6">
+                        ٩(ŏ﹏ŏ｡ )۶
                 </StyledTypography>
+                <WellComeUserText>
+                    <span>ようこそ、{<UserName name={userName}/>}さん</span>
+                </WellComeUserText>
+                </ToolbarLeft>
                 <ToolbarRight>
                     <StyledButton>
                         ランキング編集
@@ -48,3 +61,5 @@ export default function NavigationBar() {
         </StyledAppBar>
     )
 }
+
+export default NavigationBar
