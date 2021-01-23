@@ -9,7 +9,7 @@ const theme = createMuiTheme({
             main:"#08d9d6"
         },
         text:{
-            primary:"#fff",
+            primary: "#fff",
             secondary: "#08d9d6"
         },
         background:{
@@ -36,5 +36,11 @@ const theme = createMuiTheme({
         }
     }
 })
+//以下の設定でDefaultThemeを拡張すると、コード補完が効くようになる
+type AppTheme = typeof theme
+
+declare module 'styled-components'{
+    interface DefaultTheme extends AppTheme{}
+}
 
 export default theme
