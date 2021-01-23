@@ -28,7 +28,7 @@ const StyledTypography = styled(Typography)`
     color: ${props => props.theme.palette.text.secondary};
 
 `
-const StyledButton = styled(Button)`
+const NavigationButton = styled(Button)`
     &:hover{
         color:${props => props.theme.palette.text.secondary}
     }
@@ -48,15 +48,15 @@ const NavigationBar: React.FC = () => {
                 </WellComeUserText>
                 </ToolbarLeft>
                 <ToolbarRight>
-                    <StyledButton>
+                    <NavigationButton>
                         ランキング編集
-                    </StyledButton>
-                    <StyledButton>
+                    </NavigationButton>
+                    <NavigationButton>
                         プレゼント登録
-                    </StyledButton>
-                    <StyledButton>
+                    </NavigationButton>
+                    <NavigationButton>
                         ログアウト
-                    </StyledButton>
+                    </NavigationButton>
                 </ToolbarRight>
             </Toolbar>
         </StyledAppBar>
