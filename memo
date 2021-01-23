@@ -27,3 +27,34 @@ https://github.com/zacanger/styled-reset
 以下react native本 参考ページ
 カラー設定説明 P.419
 Atomic Design粒度 P.413
+
+
+styled componentでmaterial-uiの既存スタイルに負けてしまいオーバーライドできないときの対処
+//material-uiの元のbackground-colorに負けてボタンのbackground-colorが上書きできない
+const ThemeButton = styled(Button)`
+    background-color:${props => props.theme.palette.secondary.main};
+    background-color: ${props => props.theme.palette.secondary.light}
+`
+const StyledButton: React.FC<Props> = () => {
+    return(
+        <ThemeButton onClick={onClick}>
+            {label}
+        </ThemeButton>
+    )
+}
+//ThemeButtonにclassNameを指定して、詳細度を上げることで上書きすることができた。
+const ThemeButton = styled(Button)`
+    &.styled{
+        background-color:${props => props.theme.palette.secondary.main};
+    }
+    &.styled:hover{
+        background-color: ${props => props.theme.palette.secondary.light}
+    }
+`
+const StyledButton: React.FC<Props> = ({label,onClick}) => {
+    return(
+        <ThemeButton className="styled" onClick={onClick}>
+            {label}
+        </ThemeButton>
+    )
+}
