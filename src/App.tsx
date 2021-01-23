@@ -1,4 +1,5 @@
 import React from 'react';
+import {RecoilRoot} from 'recoil'
 import {Reset} from 'styled-reset'
 // import styled from 'styled-components'
 // import * as path from './constants/path'
@@ -10,14 +11,16 @@ import NavigationBar from './components/organisms/NavigationBar';
 
 function App() {
   return (
-    <MaterialThemeProvider theme={theme}>
-      <StyledThemeProvider  theme={theme}>
-        <React.Fragment>
-          <NavigationBar />
-          <Reset />
-        </React.Fragment>
-      </StyledThemeProvider>
-    </MaterialThemeProvider>
+    <RecoilRoot>
+      <MaterialThemeProvider theme={theme}>
+        <StyledThemeProvider theme={theme}>
+          <React.Fragment>
+            <NavigationBar />
+            <Reset />
+          </React.Fragment>
+        </StyledThemeProvider>
+      </MaterialThemeProvider>
+    </RecoilRoot>
   );
 }
 

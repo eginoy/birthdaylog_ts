@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { AppBar, Button, Toolbar } from "@material-ui/core"
 import Typography from '@material-ui/core/Typography';
 import UserName from '../atoms/UserName';
+import { useRecoilValue } from 'recoil';
+import {userState} from '../../state/User'
 
 const StyledAppBar = styled(AppBar)`
     *{
@@ -32,9 +34,8 @@ const StyledButton = styled(Button)`
     }
 `
 
-let userName = 'eginoy'
-
 const NavigationBar: React.FC = () => {
+    const user = useRecoilValue(userState)
     return (
         <StyledAppBar>
             <Toolbar>
@@ -43,7 +44,7 @@ const NavigationBar: React.FC = () => {
                         ٩(ŏ﹏ŏ｡ )۶
                 </StyledTypography>
                 <WellComeUserText>
-                    <span>ようこそ、{<UserName name={userName}/>}さん</span>
+                    <span>ようこそ、{<UserName name={user.Name}/>}さん</span>
                 </WellComeUserText>
                 </ToolbarLeft>
                 <ToolbarRight>
