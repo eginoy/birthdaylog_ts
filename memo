@@ -1,3 +1,6 @@
+React useEffect参考
+https://reffect.co.jp/react/react-useeffect-understanding
+
 Recoil(GlobalState管理)
 https://recoiljs.org/docs/basic-tutorial/atoms
 Recoil example
@@ -8,6 +11,9 @@ https://qiita.com/serinuntius/items/3d6519988233d7ba643c
 CSS in JS
 https://www.i-ryo.com/entry/2020/12/16/052128
 https://akabeko.me/blog/2020/11/styled-components/
+
+aタグのユーザーエージェントスタイル上書き
+https://www.366service.com/jp/qa/5bb8b0bd7ede8b67b1b3f610dfaabe35
 
 material-ui
 material-ui theme設定

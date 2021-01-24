@@ -1,4 +1,4 @@
-import {atom, useRecoilValue} from 'recoil'
+import {atom} from 'recoil'
 
 export interface User{
     Uid: string | null

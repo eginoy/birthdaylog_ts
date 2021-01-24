@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 import { AppBar, Button, Toolbar } from "@material-ui/core"
 import Typography from '@material-ui/core/Typography';
-import UserName from '../atoms/UserName';
 import { useRecoilValue } from 'recoil';
 import {userState} from '../../state/User'
+import {Link} from 'react-router-dom'
+import UserName from '../atoms/UserName';
+import { GIFT_REGISTRATION } from '../../constants/path';
 
 const StyledAppBar = styled(AppBar)`
     *{
@@ -52,7 +54,7 @@ const NavigationBar: React.FC = () => {
                         ランキング編集
                     </NavigationButton>
                     <NavigationButton>
-                        プレゼント登録
+                        <Link className='link' to={GIFT_REGISTRATION}>プレゼント登録</Link>
                     </NavigationButton>
                     <NavigationButton>
                         ログアウト
