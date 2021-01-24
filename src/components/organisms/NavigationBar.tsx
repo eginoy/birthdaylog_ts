@@ -6,6 +6,7 @@ import {userState} from '../../state/User'
 import {Link} from 'react-router-dom'
 import UserName from '../atoms/UserName';
 import { GIFT_REGISTRATION } from '../../constants/path';
+import * as auth from '../../auth/auth'
 
 const StyledAppBar = styled(AppBar)`
     *{
@@ -36,6 +37,10 @@ const NavigationButton = styled(Button)`
     }
 `
 
+const logout = () =>{
+    auth.logout()
+}
+
 const NavigationBar: React.FC = () => {
     const user = useRecoilValue(userState)
     return (
@@ -56,7 +61,7 @@ const NavigationBar: React.FC = () => {
                     <NavigationButton>
                         <Link className='link' to={GIFT_REGISTRATION}>プレゼント登録</Link>
                     </NavigationButton>
-                    <NavigationButton>
+                    <NavigationButton onClick={logout}>
                         ログアウト
                     </NavigationButton>
                 </ToolbarRight>

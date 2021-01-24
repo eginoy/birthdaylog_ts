@@ -8,7 +8,8 @@ import StyledButton from './components/atoms/StyledButton';
 import styled, { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import AuthGuard from './auth/AuthGuard';
+import AuthRoute from './auth/AuthRoute';
+import * as auth from './auth/auth'
 import { GIFT_REGISTRATION, LOGIN } from './constants/path';
 import { GiftRegistration, Login } from './components/pages';
 
@@ -26,6 +27,10 @@ const LogInButtonWrapper = styled.div`
   justify-content:center;
 `
 
+const onClick = () => {
+  auth.googleLogin();
+}
+
 function App() {
   return (
     <StyledThemeProvider theme={theme}>
@@ -38,15 +43,11 @@ function App() {
                 <NavigationBar />
                 <LogInButtonWrapper>
                   <div>
-                    <StyledButton label={'Googleアカウントでログイン'} onClick={function () { }} />
+                    <StyledButton label={'Googleアカウントでログイン'} onClick={onClick} />
                   </div>
                 </LogInButtonWrapper>
                 <Route exact path={LOGIN} component={Login}></Route>
-                <AuthGuard>
-                  <Switch>
-                    <Route exact path={GIFT_REGISTRATION} component={GiftRegistration}></Route>
-                  </Switch>
-                </AuthGuard>
+                <AuthRoute exact path={GIFT_REGISTRATION} Component={GiftRegistration}></AuthRoute>
               </React.Fragment>
             </Switch>
           </Router>
