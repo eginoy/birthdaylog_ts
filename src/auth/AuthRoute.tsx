@@ -20,10 +20,10 @@ const AuthRoute = ({ Component, path, exact = false }: Props) => {
         })
     }, []);
 
-    const isAuthed = false
+    const isAuthed = true
     const setUser = useSetRecoilState(userState)
     const message = '管理者の承認待機中です'
-    
+
     return (
         <Route
             exact={exact}
