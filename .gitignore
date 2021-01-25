@@ -17,7 +17,10 @@
 .env.development
 .env.test.local
 .env.production
+<<<<<<< HEAD
 *.*
+=======
+>>>>>>> 993dbb5... storybookでstyled-componentsのテーマを読み込めるよう設定
 
 npm-debug.log*
 yarn-debug.log*
