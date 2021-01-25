@@ -29,6 +29,8 @@ https://qiita.com/Ouvill/items/c6761c32d31ffb11e114#material-ui-%E3%81%A8-styled
 
 Storybook(UI開発ツール)
 https://www.learnstorybook.com/intro-to-storybook/react/ja/get-started/
+Storybookでstyled-componentのテーマを使用できるアドオン
+https://storybook.js.org/addons/storybook-addon-styled-component-theme
 Storybook参考
 https://dev.classmethod.jp/articles/rnfw-storybook/
 
