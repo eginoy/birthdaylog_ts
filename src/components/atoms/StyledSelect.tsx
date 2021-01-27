@@ -5,7 +5,8 @@ import { FormControl, Select } from '@material-ui/core'
 import { User } from '../../state/User'
 
 interface Props {
-    users: User[]
+    users: User[],
+    selectLabel: string
 }
 
 const Styled = styled.div`
@@ -14,7 +15,7 @@ const Styled = styled.div`
     }
 `
 
-const StyledSelect: React.FC<Props> = ({ users }) => {
+const StyledSelect: React.FC<Props> = ({ users,selectLabel }) => {
     const [selectedValue, setSelectedValue] = useState(users[0].Uid)
     const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
         setSelectedValue(event.target.value as string);
@@ -23,7 +24,7 @@ const StyledSelect: React.FC<Props> = ({ users }) => {
     return (
         <Styled>
             <FormControl className='form'>
-                <InputLabel>誰へのプレゼント?</InputLabel>
+                <InputLabel>{selectLabel}</InputLabel>
                 <Select value={selectedValue} onChange={handleChange}>
                     {users.map(user => {
                         if (user.Uid) {

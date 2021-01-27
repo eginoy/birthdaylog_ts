@@ -12,5 +12,6 @@ Default.args = {
     users:[
         { Uid: "eginoyUid", Name: "eginoy", Birthday: "2000-06-01" },
         { Uid: "tarouUid", Name: "tarou", Birthday: "2000-10-30" }
-    ]
+    ],
+    selectLabel: '誰へのプレゼント?'
 }
