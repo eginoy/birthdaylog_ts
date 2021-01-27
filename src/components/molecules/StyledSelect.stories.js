@@ -7,7 +7,7 @@ export default {
 
 const Template = args => <StyledSelect {...args}/>
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 Default.args = {
     users:[
         { Uid: "eginoyUid", Name: "eginoy", Birthday: "2000-06-01" },
