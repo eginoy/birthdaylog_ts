@@ -14,6 +14,9 @@ const ThemeButton = styled(Button)`
     &.styled:hover{
         background-color: ${props => props.theme.palette.secondary.light}
     }
+    span{
+        color:white;
+    }
 `
 
 const StyledButton: React.FC<Props> = ({label,onClick}) => {
