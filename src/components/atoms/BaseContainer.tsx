@@ -1,11 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-interface Props{
-    label:string
-}
-
-const Wrapper = styled.div`
+const BaseContainer = styled.div`
     width:80%;
     height:auto;
     border-radius:0.5em;
@@ -18,13 +14,5 @@ const Wrapper = styled.div`
         font-size: 0.9em;
     }
 `
-
-const BaseContainer: React.FC<Props> = ({label}) =>{
-    return (
-        <Wrapper>
-            <span>{label}</span>
-        </Wrapper>
-    )
-}
 
 export default BaseContainer
