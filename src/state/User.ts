@@ -3,7 +3,7 @@ import {atom} from 'recoil'
 export interface User{
     Uid: string | null
     Name: string | null
-    Birthday?: Date | null
+    Birthday?: string | null
     IsAuthed?: boolean | null
 }
 
