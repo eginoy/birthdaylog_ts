@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React, { SetStateAction, useState } from 'react'
 import styled from 'styled-components'
 import { InputLabel, MenuItem } from '@material-ui/core'
 import { FormControl, Select } from '@material-ui/core'
 import { User } from '../../state/User'
 
 interface Props {
-    users: User[],
-    selectLabel: string
+    users: unknown[],
+    selectLabel: string,
+    defaultValue: unknown,
+    setSelectedValue: React.Dispatch<SetStateAction<string | null>>
 }
 
 const Styled = styled.div`
@@ -15,17 +17,15 @@ const Styled = styled.div`
     }
 `
 
-const StyledSelect: React.FC<Props> = ({ users,selectLabel }) => {
-    const [selectedValue, setSelectedValue] = useState(users[0].Uid)
+const StyledSelect = ({ users,selectLabel,defaultValue,setSelectedValue }:Props) => {
     const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
         setSelectedValue(event.target.value as string);
-        console.log(selectedValue)
     }
     return (
         <Styled>
             <FormControl className='form'>
                 <InputLabel>{selectLabel}</InputLabel>
-                <Select value={selectedValue} onChange={handleChange}>
+                <Select value={defaultValue} onChange={handleChange}>
                     {users.map(user => {
                         if (user.Uid) {
                             return (
