@@ -9,10 +9,6 @@ const BaseContainer = styled.div`
     margin: 2em auto;
     padding:0.5em 1em;
     background-color: ${props => props.theme.palette.primary.main};
-    span{
-        color:${props => props.theme.palette.text.primary};
-        font-size: 0.9em;
-    }
 `
 
 export default BaseContainer
