@@ -4,7 +4,7 @@ interface Props{
     keyLabel: string
     value: string
     linkLabel?: string
-    isLink: boolean
+    isLink?: boolean
 }
 
 const ThemeLabel = styled.div`
@@ -18,7 +18,7 @@ const ThemeLabel = styled.div`
     }
 `
 
-const StyledLabel = ({keyLabel,value,linkLabel,isLink}:Props) => {
+const StyledLabel = ({keyLabel,value,linkLabel,isLink = false}:Props) => {
     return (
         <ThemeLabel>
             <span>{keyLabel}: </span>{
