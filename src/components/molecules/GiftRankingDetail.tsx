@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import StyledLabel from '../atoms/StyledLabel'
-import {GiftRankingDetail as DetailType} from '../../types/Gift'
+import {GiftDetail} from '../../types/Gift'
 
 const Wrapper = styled.div`
     padding:0.5em;
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
     }
 `
 
-const GiftRankingDetail = ({Rank,Name,URL,Comment,InsertUid}:DetailType) =>{
+const GiftRankingDetail = ({Rank,Name,URL,Comment,InsertUid}:GiftDetail) =>{
     return (
         <Wrapper>
             <span>{Rank === 1 ? '👑' : null}{Rank}位</span>
