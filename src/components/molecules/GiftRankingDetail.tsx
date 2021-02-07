@@ -3,7 +3,12 @@ import StyledLabel from '../atoms/StyledLabel'
 import {GiftRankingDetail as DetailType} from '../../types/Gift'
 
 const Wrapper = styled.div`
-
+    padding:0.5em;
+    background-color:${props => props.theme.palette.background.default};
+    border-radius:0.5em;
+    & > div{
+        margin-left:1.5em;
+    }
 `
 
 const GiftRankingDetail = ({Rank,Name,URL,Comment,InsertUid}:DetailType) =>{
