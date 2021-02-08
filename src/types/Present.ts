@@ -1,15 +1,15 @@
-export type GiftRegister = Gift & GiftDetail & {
+export type PresentRegister = Present & PresentDetail & {
     Id?: string
     InsertDate: Date
 }
 
-export type Gift = GiftDetail & {
+export type Present = PresentDetail & {
     ToUid: string
     Birthday: string
     IsShow:boolean
 }
 
-export type GiftDetail = {
+export type PresentDetail = {
     Rank: number
     Name: string
     URL: string

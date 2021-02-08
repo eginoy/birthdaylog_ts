@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { User } from '../../state/User'
-import { Gift } from '../../types/Gift'
+import { Present } from '../../types/Present'
 import BaseContainer from '../atoms/BaseContainer'
-import GiftRankingDetail from '../molecules/GiftRankingDetail'
+import GiftRankingDetail from '../molecules/PresentRankingDetail'
 
 interface Props {
-    gifts: Gift[]
+    gifts: Present[]
 }
 
 styled(BaseContainer)`
@@ -17,14 +16,14 @@ const GiftDetailsWrapper = styled.div`
 
 `
 
-const getUserName = (uid: Gift['ToUid']) => {
+const getUserName = (uid: Present['ToUid']) => {
     if (uid) {
         return 'eginoy'
     }
     return 'ゲスト'
 }
 
-const getAge = (birthday: Gift['Birthday']) => {
+const getAge = (birthday: Present['Birthday']) => {
     if (birthday) {
         return 20
     }
@@ -43,13 +42,15 @@ const GiftRanking = ({ gifts }: Props) => {
             </div>
             <GiftDetailsWrapper>
                 {gifts.map(gift => {
-                    <GiftRankingDetail
-                        Rank={gift.Rank}
-                        Name={gift.Name}
-                        URL={gift.URL}
-                        Comment={gift.Comment}
-                        InsertUid={gift.InsertUid}
-                    />
+                    return (
+                        <GiftRankingDetail
+                            Rank={gift.Rank}
+                            Name={gift.Name}
+                            URL={gift.URL}
+                            Comment={gift.Comment}
+                            InsertUid={gift.InsertUid}
+                        />
+                    )
                 })}
             </GiftDetailsWrapper>
         </BaseContainer>

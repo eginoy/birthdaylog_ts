@@ -1,5 +1,5 @@
 export {default as Home } from './Home'
-export {default as GiftRegistration} from './GiftRegistration'
+export {default as GiftRegistration} from './PresentRegistration'
 export {default as RankingEdit } from './RankingEdit'
 export {default as Login } from './Login'
 export {default as Logout } from './Logout'

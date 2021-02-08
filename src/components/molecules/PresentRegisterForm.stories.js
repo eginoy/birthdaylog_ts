@@ -1,4 +1,4 @@
-import GiftRegisterForm from './GiftRegisterForm'
+import GiftRegisterForm from './PresentRegisterForm'
 
 export default {
     component: GiftRegisterForm,

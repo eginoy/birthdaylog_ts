@@ -10,7 +10,7 @@ import reset from 'styled-reset'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import AuthRoute from './auth/AuthRoute';
 import * as auth from './auth/auth'
-import { GIFT_REGISTRATION, LOGIN } from './constants/path';
+import { PRESENT_REGISTRATION, LOGIN } from './constants/path';
 import { GiftRegistration, Login } from './components/pages';
 
 const GlobalStyle = createGlobalStyle`
@@ -47,7 +47,7 @@ function App() {
                   </div>
                 </LogInButtonWrapper>
                 <Route exact path={LOGIN} component={Login}></Route>
-                <AuthRoute exact path={GIFT_REGISTRATION} Component={GiftRegistration}></AuthRoute>
+                <AuthRoute exact path={PRESENT_REGISTRATION} Component={GiftRegistration}></AuthRoute>
               </React.Fragment>
             </Switch>
           </Router>

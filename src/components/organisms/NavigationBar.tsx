@@ -5,7 +5,7 @@ import { useRecoilValue } from 'recoil';
 import {userState} from '../../state/User'
 import {Link} from 'react-router-dom'
 import UserName from '../atoms/UserName';
-import { GIFT_REGISTRATION } from '../../constants/path';
+import { PRESENT_REGISTRATION } from '../../constants/path';
 import * as auth from '../../auth/auth'
 
 const StyledAppBar = styled(AppBar)`
@@ -59,7 +59,7 @@ const NavigationBar: React.FC = () => {
                         ランキング編集
                     </NavigationButton>
                     <NavigationButton>
-                        <Link className='link' to={GIFT_REGISTRATION}>プレゼント登録</Link>
+                        <Link className='link' to={PRESENT_REGISTRATION}>プレゼント登録</Link>
                     </NavigationButton>
                     <NavigationButton onClick={logout}>
                         ログアウト

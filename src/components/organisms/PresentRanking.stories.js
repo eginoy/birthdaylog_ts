@@ -1,4 +1,4 @@
-import GiftRanking from './GiftRanking'
+import GiftRanking from './PresentRanking'
 
 export default {
     component: GiftRanking,
