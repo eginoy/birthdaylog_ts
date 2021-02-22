@@ -8,12 +8,19 @@ interface Props {
     gifts: Present[]
 }
 
-styled(BaseContainer)`
-
+const StyledWrapper = styled.div`
+    .birthday-user-info{
+        margin-bottom: 0.3em;
+    }
+    .birthday-user-info > span{
+        color:${props => props.theme.palette.text.primary};
+    }
 `
 
 const GiftDetailsWrapper = styled.div`
-
+    & > div{
+        margin-bottom:1em;
+    }
 `
 
 const getUserName = (uid: Present['ToUid']) => {
@@ -35,25 +42,27 @@ const GiftRanking = ({ gifts }: Props) => {
     const userAge = getAge(gifts[0].Birthday)
 
     return (
-        <BaseContainer>
-            <div className='birthday-user-info'>
-                <span>{userName}のプレゼントランキング</span>
-                <span>{userAge}歳の誕生日</span>
-            </div>
-            <GiftDetailsWrapper>
-                {gifts.map(gift => {
-                    return (
-                        <GiftRankingDetail
-                            Rank={gift.Rank}
-                            Name={gift.Name}
-                            URL={gift.URL}
-                            Comment={gift.Comment}
-                            InsertUid={gift.InsertUid}
-                        />
-                    )
-                })}
-            </GiftDetailsWrapper>
-        </BaseContainer>
+        <StyledWrapper>
+            <BaseContainer>
+                <div className='birthday-user-info'>
+                    <span>{userName}のプレゼントランキング</span>
+                    <span>{userAge}歳の誕生日</span>
+                </div>
+                <GiftDetailsWrapper>
+                    {gifts.map(gift => {
+                        return (
+                            <GiftRankingDetail
+                                Rank={gift.Rank}
+                                Name={gift.Name}
+                                URL={gift.URL}
+                                Comment={gift.Comment}
+                                InsertUid={gift.InsertUid}
+                            />
+                        )
+                    })}
+                </GiftDetailsWrapper>
+            </BaseContainer>
+        </StyledWrapper>
     )
 }
 
