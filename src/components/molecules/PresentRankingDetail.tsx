@@ -9,12 +9,17 @@ const Wrapper = styled.div`
     & > div{
         margin-left:1.5em;
     }
+    .rank-label{
+        display:inline-block;
+        width:3em;
+        text-align:right;
+    }
 `
 
 const GiftRankingDetail = ({Rank,Name,URL,Comment,InsertUid}:PresentDetail) =>{
     return (
         <Wrapper>
-            <span>{Rank === 1 ? '👑' : null}{Rank}位</span>
+            <span className='rank-label'>{Rank === 1 ? '👑' : null}{Rank}位</span>
             <StyledLabel keyLabel='商品名' linkLabel={Name} value={URL} isLink={true} />
             <StyledLabel keyLabel='提案者' value={InsertUid} />
             <StyledLabel keyLabel='レビュー' value={Comment} />
