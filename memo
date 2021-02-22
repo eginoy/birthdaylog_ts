@@ -1,5 +1,7 @@
 React useEffect参考
 https://reffect.co.jp/react/react-useeffect-understanding
+useeffect内での非同期処理
+https://numb86-tech.hatenablog.com/entry/2019/03/21/182159
 
 Recoil(GlobalState管理)
 https://recoiljs.org/docs/basic-tutorial/atoms
