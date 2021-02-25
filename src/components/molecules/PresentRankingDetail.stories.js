@@ -1,11 +1,11 @@
-import GiftRankingDetail from './PresentRankingDetail'
+import PresentRankingDetail from './PresentRankingDetail'
 
 export default {
-    component: GiftRankingDetail,
-    title:'GiftRankingDetail'
+    component: PresentRankingDetail,
+    title:'PresentRankingDetail'
 }
 
-const Template = (args) => <GiftRankingDetail {...args}/>
+const Template = (args) => <PresentRankingDetail {...args}/>
 
 export const Default = Template.bind({})
 Default.args = {

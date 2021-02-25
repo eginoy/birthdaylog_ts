@@ -1,12 +1,12 @@
 import { stringify } from 'querystring'
-import GiftRanking from './PresentRanking'
+import PresentRanking from './PresentRanking'
 
 export default {
-    component: GiftRanking,
-    title:'GiftRanking'
+    component: PresentRanking,
+    title:'PresentRanking'
 }
 
-const Template = (args) => <GiftRanking {...args}/>
+const Template = (args) => <PresentRanking {...args}/>
 
 export const Default = Template.bind({})
 Default.args = {

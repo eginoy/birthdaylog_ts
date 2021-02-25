@@ -65,7 +65,7 @@ const getHelperText = (field: TextFieldValue):string => {
     }
 }
 
-const GiftRegisterForm = () => {
+const PresentRegisterForm = () => {
     const users = getUsers()
     const [isClicked,setIsClicked] = useState(false)
     const [selectedValue,setSelectedValue] = useState(users[0].Uid)
@@ -133,4 +133,4 @@ const GiftRegisterForm = () => {
     )
 }
 
-export default GiftRegisterForm
+export default PresentRegisterForm

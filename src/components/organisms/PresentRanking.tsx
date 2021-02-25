@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Present } from '../../types/Present'
 import BaseContainer from '../atoms/BaseContainer'
-import GiftRankingDetail from '../molecules/PresentRankingDetail'
+import PresentRankingDetail from '../molecules/PresentRankingDetail'
 
 interface Props {
     gifts: Present[]
@@ -17,7 +17,7 @@ const StyledWrapper = styled.div`
     }
 `
 
-const GiftDetailsWrapper = styled.div`
+const PresentDetailsWrapper = styled.div`
     & > div{
         margin-bottom:1em;
     }
@@ -37,7 +37,7 @@ const getAge = (birthday: Present['Birthday']) => {
     return '年齢の取得に失敗'
 }
 
-const GiftRanking = ({ gifts }: Props) => {
+const PresentRanking = ({ gifts }: Props) => {
     const userName = getUserName(gifts[0].ToUid)
     const userAge = getAge(gifts[0].Birthday)
 
@@ -48,10 +48,10 @@ const GiftRanking = ({ gifts }: Props) => {
                     <span>{userName}のプレゼントランキング</span>
                     <span>{userAge}歳の誕生日</span>
                 </div>
-                <GiftDetailsWrapper>
+                <PresentDetailsWrapper>
                     {gifts.map(gift => {
                         return (
-                            <GiftRankingDetail
+                            <PresentRankingDetail
                                 Rank={gift.Rank}
                                 Name={gift.Name}
                                 URL={gift.URL}
@@ -60,10 +60,10 @@ const GiftRanking = ({ gifts }: Props) => {
                             />
                         )
                     })}
-                </GiftDetailsWrapper>
+                </PresentDetailsWrapper>
             </BaseContainer>
         </StyledWrapper>
     )
 }
 
-export default GiftRanking
+export default PresentRanking

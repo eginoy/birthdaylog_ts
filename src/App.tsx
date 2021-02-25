@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import AuthRoute from './auth/AuthRoute';
 import * as auth from './auth/auth'
 import { PRESENT_REGISTRATION, LOGIN } from './constants/path';
-import { GiftRegistration, Login } from './components/pages';
+import {PresentRegistration, Login } from './components/pages';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -47,7 +47,7 @@ function App() {
                   </div>
                 </LogInButtonWrapper>
                 <Route exact path={LOGIN} component={Login}></Route>
-                <AuthRoute exact path={PRESENT_REGISTRATION} Component={GiftRegistration}></AuthRoute>
+                <AuthRoute exact path={PRESENT_REGISTRATION} Component={PresentRegistration}></AuthRoute>
               </React.Fragment>
             </Switch>
           </Router>

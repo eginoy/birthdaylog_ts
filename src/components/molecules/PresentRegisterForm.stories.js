@@ -1,11 +1,11 @@
-import GiftRegisterForm from './PresentRegisterForm'
+import PresentRegisterForm from './PresentRegisterForm'
 
 export default {
-    component: GiftRegisterForm,
-    title:'GiftRegisterForm'
+    component: PresentRegisterForm,
+    title:'PresentRegisterForm'
 }
 
-const Template = args => <GiftRegisterForm {...args}/>
+const Template = args => <PresentRegisterForm {...args}/>
 
 export const Default = Template.bind({})
 Default.args = {

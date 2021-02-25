@@ -16,7 +16,7 @@ const Wrapper = styled.div`
     }
 `
 
-const GiftRankingDetail = ({Rank,Name,URL,Comment,InsertUid}:PresentDetail) =>{
+const PresentRankingDetail = ({Rank,Name,URL,Comment,InsertUid}:PresentDetail) =>{
     return (
         <Wrapper>
             <span className='rank-label'>{Rank === 1 ? '👑' : null}{Rank}位</span>
@@ -27,4 +27,4 @@ const GiftRankingDetail = ({Rank,Name,URL,Comment,InsertUid}:PresentDetail) =>{
     )
 }
 
-export default GiftRankingDetail
+export default PresentRankingDetail
