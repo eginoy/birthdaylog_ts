@@ -2,10 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { Present } from '../../types/Present'
 import BaseContainer from '../atoms/BaseContainer'
+import StyledTextField from '../atoms/StyledTextField'
 import PresentRankingDetail from '../molecules/PresentRankingDetail'
 
 interface Props {
-    gifts: Present[]
+    presents: Present[]
 }
 
 const StyledWrapper = styled.div`
@@ -37,9 +38,9 @@ const getAge = (birthday: Present['Birthday']) => {
     return '年齢の取得に失敗'
 }
 
-const PresentRankingEdit = ({ gifts }: Props) => {
-    const userName = getUserName(gifts[0].ToUid)
-    const userAge = getAge(gifts[0].Birthday)
+const PresentRankingEdit = ({ presents: presents }: Props) => {
+    const userName = getUserName(presents[0].ToUid)
+    const userAge = getAge(presents[0].Birthday)
 
     return (
         <StyledWrapper>
@@ -49,14 +50,14 @@ const PresentRankingEdit = ({ gifts }: Props) => {
                     <span>{userAge}歳の誕生日</span>
                 </div>
                 <PresentDetailsWrapper>
-                    {gifts.map(gift => {
+                    {presents.map(present => {
                         return (
                             <PresentRankingDetail
-                                Rank={gift.Rank}
-                                Name={gift.Name}
-                                URL={gift.URL}
-                                Comment={gift.Comment}
-                                InsertUid={gift.InsertUid}
+                                Rank={present.Rank}
+                                Name={present.Name}
+                                URL={present.URL}
+                                Comment={present.Comment}
+                                InsertUid={present.InsertUid}
                             />
                         )
                     })}
